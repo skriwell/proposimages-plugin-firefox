@@ -1,0 +1,29 @@
+{
+
+  "manifest_version": 2,
+  "name": "FaJout",
+  "version": "0.1",
+
+  "description": "...",
+
+  "icons": {
+    "48": "icons/48.png"
+  },
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["proposimages.js"],
+      "css": ["style.css"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "icons/48.png"
+  ]
+
+}
