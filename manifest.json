@@ -1,8 +1,7 @@
 {
-
   "manifest_version": 2,
-  "name": "FaJout",
-  "version": "0.1",
+  "name": "ProposImages",
+  "version": "0.0.1",
 
   "description": "...",
 
@@ -10,20 +9,16 @@
     "48": "icons/48.png"
   },
 
-  "background": {
-    "page": "background.html"
+  "browser_action": {
+    "default_icon": "icons/48.png"
   },
 
-  "content_scripts": [
-    {
-      "matches": ["*://*/*"],
-      "js": ["proposimages.js"],
-      "css": ["style.css"]
-    }
+  "permissions": [
+    "contextMenus",
+    "activeTab"
   ],
 
-  "web_accessible_resources": [
-    "icons/48.png"
-  ]
-
+  "background": {
+    "scripts": ["background.js"]
+  }
 }
